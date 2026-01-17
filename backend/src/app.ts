@@ -16,6 +16,8 @@ mongoose.connect(DB_ADDRESS);
 app.use(cors({
   origin: 'https://tgeodude.nomorepartiessbs.ru',
   credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

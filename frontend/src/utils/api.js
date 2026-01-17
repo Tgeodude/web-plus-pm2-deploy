@@ -22,6 +22,7 @@ class Api {
         headers: {
           'Authorization': `Bearer ${this._token}`,
         },
+        credentials: 'include',
       })
       .then(getResponse)
     }
@@ -33,6 +34,7 @@ class Api {
           'Authorization': `Bearer ${this._token}`,
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify({
           name,
           link,
@@ -48,6 +50,7 @@ class Api {
           'Authorization': `Bearer ${this._token}`,
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
       }).then(getResponse)
     }
   
@@ -57,6 +60,7 @@ class Api {
           'Authorization': `Bearer ${this._token}`,
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
       })
       .then(getResponse)
     }
@@ -68,6 +72,7 @@ class Api {
           'Authorization': `Bearer ${this._token}`,
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify({
           name,
           about,
@@ -83,6 +88,7 @@ class Api {
           'Authorization': `Bearer ${this._token}`,
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify({
           avatar,
         }),
@@ -97,6 +103,7 @@ class Api {
           'Authorization': `Bearer ${this._token}`,
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
       }).then(getResponse)
     }
   
@@ -106,6 +113,7 @@ class Api {
         headers: {
           'Content-Type': 'application/json'
         },
+        credentials: 'include',
         body: JSON.stringify({email, password})
       })
       .then(getResponse)
@@ -117,6 +125,7 @@ class Api {
         headers: {
           'Content-Type': 'application/json'
         },
+        credentials: 'include',
         body: JSON.stringify({email, password})
       })
       .then(getResponse)
@@ -133,7 +142,8 @@ class Api {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,
-        }
+        },
+        credentials: 'include',
       })
       .then(getResponse)
   }
